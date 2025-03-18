@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beautiful Bootstrap Webpage</title>
+    <title>Fernando's Personal Website</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .hero {
@@ -19,13 +19,23 @@
         .btn-custom:hover {
             background-color: #e73370;
         }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .content {
+            padding: 50px 0;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">My Website</a>
+            <a class="navbar-brand" href="#">Fernando's Website</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -33,7 +43,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
                 </ul>
             </div>
@@ -43,12 +53,29 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Welcome to My Beautiful Website</h1>
-            <p class="lead">A simple and elegant Bootstrap webpage.</p>
-            <a href="#" class="btn btn-lg btn-custom">Get Started</a>
+            <h1>Welcome to Fernando's Website</h1>
+            <p class="lead">Web Developer | Designer | Entrepreneur</p>
+            <a href="#" class="btn btn-lg btn-custom" id="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="content">
+        <div class="container">
+            <img src="your-image.jpg" alt="Fernando's Profile" class="profile-img">
+            <h2>About Me</h2>
+            <p>Hi! I'm Fernando, a passionate web developer specializing in MERN stack development. I love creating user-friendly websites and applications.</p>
         </div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const button = document.getElementById("cta-button");
+            button.addEventListener("click", function() {
+                alert("Welcome to Fernando's world of web development!");
+            });
+        });
+    </script>
 </body>
 </html>
