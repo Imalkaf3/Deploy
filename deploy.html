@@ -1,151 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fernando's Personal Website</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #121212;
-            color: #ffffff;
-        }
-        .hero {
-            background: #1e1e1e;
-            color: white;
-            padding: 100px 0;
-            text-align: center;
-        }
-        .btn-custom {
-            background-color: #ff4081;
-            color: white;
-        }
-        .btn-custom:hover {
-            background-color: #e73370;
-        }
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-        .content {
-            padding: 50px 0;
-        }
-        .about-container {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-        footer {
-            background: #1e1e1e;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-        .chat-box {
-            width: 25%; /* Updated width to 25% */
-            margin: 0 auto; /* Centered the chat box */
-            background: #333;
-            border: 1px solid #444;
-            border-radius: 5px;
-            padding: 10px;
-            margin-top: 20px;
-        }
-        .chat-box input {
-            width: 100%;
-            padding: 5px;
-            margin-top: 10px;
-            background: #444;
-            border: none;
-            color: white;
-        }
-        .chat-box button {
-            width: 100%;
-            margin-top: 5px;
-            background-color: #ff4081;
-            color: white;
-            border: none;
-            padding: 5px;
-            cursor: pointer;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Center "Parth" */
+    .parth {
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    /* Ensure "Welcome to My Website" is centered */
+    .welcome-text {
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    /* Add padding and responsive spacing for smaller screens */
+    header, main, footer {
+      padding: 10px;
+    }
+
+    /* Fine-tune font size for smaller screens */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Fernando's Website</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">My Site</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>Welcome to Fernando's Website</h1>
-            <p class="lead">Web Developer | Designer | Entrepreneur</p>
-            <a href="#about" class="btn btn-lg btn-custom" id="cta-button">Get Started</a>
-        </div>
+  <header class="py-5">
+    <div class="container text-center">
+      <h1 class="display-4 welcome-text">Welcome to My Website</h1>
+      <p class="lead welcome-text">Your tagline or introduction goes here.</p>
+    </div>
+  </header>
+
+  <!-- Centered "Parth" -->
+  <div class="text-center parth">Parth</div>
+
+  <main class="container text-light my-5">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Here’s a place to share a bit about yourself!</p>
     </section>
-
-    <!-- About Section -->
-    <section class="content" id="about">
-        <div class="container about-container">
-            <img src="photo_2025-02-07_00-10-05.jpg" alt="Fernando's Profile" class="profile-img">
-            <div>
-                <h2>About Me</h2>
-                <p>Hi! I'm Fernando, a passionate web developer specializing in MERN stack development. I love creating user-friendly websites and applications.</p>
-            </div>
-        </div>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: yourname@example.com</p>
     </section>
+  </main>
 
-    <!-- Footer with Chat Box -->
-    <footer>
-        <p>&copy; 2025 Fernando's Website</p>
-        <div class="chat-box">
-            <p><strong>Ask anything:</strong></p>
-            <input type="text" id="userInput" placeholder="Type your question...">
-            <button onclick="askAI()">Ask</button>
-            <p id="response" style="margin-top: 10px;"></p>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        function askAI() {
-            const userQuestion = document.getElementById("userInput").value;
-            fetch("https://api.openai.com/v1/completions", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    "Authorization": "Bearer YOUR_OPENAI_API_KEY"
-                },
-                body: JSON.stringify({
-                    model: "text-davinci-003",
-                    prompt: userQuestion,
-                    max_tokens: 100
-                })
-            })
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById("response").innerText = data.choices[0].text;
-            })
-            .catch(error => {
-                document.getElementById("response").innerText = "Error getting response.";
-                console.error(error);
-            });
-        }
-    </script>
+  <footer class="text-center py-4 bg-dark text-light">
+    <p>&copy; 2025 Your Name</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
